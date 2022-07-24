@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --primary: #4b4b4b;
+  --secondary: #40005d;
+}
+
+@mixin d-flex($justify:center,$align:center){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body{
+  @include d-flex;
+  background-color: var(--primary);
+}
+
+.notFound{
+  text-align: center;
+  font-size: 36px;
+  color:white;
+  padding: 20px;
+  background-color: #666;
+  border-radius: 20px;
+}
+
+@import './Expense/expenseItem';
+@import './Expense/expenseDate';
+@import './Expense/expenseWrap';
+@import './NewExpense/newExpenseForm';
+@import './Expense/expenseFilter';
+@import './Chart/chart';

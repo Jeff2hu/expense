@@ -1,0 +1,33 @@
+.chart{
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8dfff;
+  text-align: center;
+  @include d-flex(space-around);
+  height: 10rem;
+  &-bar{
+    height: 100%;
+    @include d-flex;
+    flex-direction: column;
+    &__inner{
+      height: 100%;
+      width: 100%;
+      @include d-flex(center,flex-end);
+      border: 1px solid #313131;
+      border-radius: 12px;
+      background-color: #c3b4f3;
+      overflow: hidden;
+    }
+    &__fill{
+      background-color: #4826b9;
+      width: 100%;
+      transition: all 0.3s ease-out;
+      text-align: bottom;
+    }
+    &__label{
+      font-weight: bold;
+      font-size: 0.5rem;
+      text-align: center;
+    }
+  }
+}
